@@ -17,21 +17,21 @@ client.on('ready', () => {
 client.on('message', message => {
 
     if (message.content === '!patrol') {
-        channel.send("Listen up, rangers. We need a team to get us intel on a recently discovered NVA compound. Who's in? (type **!j** to join)");
+        message.channel.send("Listen up, rangers. We need a team to get us intel on a recently discovered NVA compound. Who's in? (type **j** to join)");
         started = true;
     }
 
     if (message.content === '!patrol' && started)
     {
+        message.channel.send("Shows over folks!");
         started = false;
-        channel.send("Game over!");
     }
 
     // If ranger joins team
-    if (message.content === '!j' && started) {
+    if (message.content === 'j' && started) {
         
         rangers.push(message.author.tag);
-        channel.send(message.author.username + " has volunteered!");
+        message.channel.send(message.author.username + " has volunteered!");
     }
 
 });
