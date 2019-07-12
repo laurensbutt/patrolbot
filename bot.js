@@ -4,21 +4,20 @@ const Attachment = require('discord.js');
 const client = new Discord.Client();
 var deployed = new Boolean(false);
 var started = new Boolean(false);
-
+const officerPic = Attachment;
 var rangers = [];
  
 
 client.on('ready', () => {
 
     console.log('I am ready!');
-    const officerPic = new Attachment('img\officer.png');
 
 });
 
  
 
 client.on('message', message => {
-
+    officerPic = new Attachment('img\officer.png');
     if (message.content === '!patrol') {
         message.channel.send(officerPic);
         message.channel.send("Listen up, rangers. We need a team to get us intel on a recently discovered NVA compound. Who's in?");
