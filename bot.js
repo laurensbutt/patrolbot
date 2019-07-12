@@ -4,7 +4,7 @@ const Attachment = require('discord.js');
 const client = new Discord.Client();
 var deployed = new Boolean(false);
 var started = new Boolean(false);
-const officerPic = Attachment;
+var officerPic;
 var rangers = [];
  
 
