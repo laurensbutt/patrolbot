@@ -1,7 +1,7 @@
 require('dotenv').config();
 const { Client, Attachment } = require('discord.js');
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const client = new Client();
 var deployed = new Boolean(false);
 var started = new Boolean(false);
 var rangers = [];
