@@ -17,7 +17,7 @@ client.on('message', message => {
     if (message.content === '!rip') {
         // Create the attachment using Attachment
        const attachment = new MessageAttachment('https://i.imgur.com/w3duR07.png');
-        // Send the attachment in the message c hannel
+        // Send the attachment in the message channel
         message.channel.send(attachment);
     }
 });
