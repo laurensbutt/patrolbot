@@ -1,5 +1,5 @@
 // Extract the required classes from the discord.js module
-const { Client, Attachment } = require('discord.js');
+const { Client, MessageAttachment } = require('discord.js');
 
 // Create an instance of a Discord client
 const client = new Client();
@@ -16,8 +16,8 @@ client.on('message', message => {
     // If the message is '!rip'
     if (message.content === '!rip') {
         // Create the attachment using Attachment
-        const attachment = new Attachment('https://i.imgur.com/w3duR07.png');
-        // Send the attachment in the message channel
+       const attachment = new MessageAttachment('https://i.imgur.com/w3duR07.png');
+        // Send the attachment in the message c hannel
         message.channel.send(attachment);
     }
 });
@@ -25,4 +25,4 @@ client.on('message', message => {
 
 // THIS  MUST  BE  THIS  WAY
 
-client.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
+client.login(process.env.BOT_TOKEN); //BOT_TOKEN is the Client Secret
