@@ -1,6 +1,5 @@
 require('dotenv').config();
 const { Client, Attachment } = require('discord.js');
-const Discord = require('discord.js');
 const client = new Client();
 var deployed = new Boolean(false);
 var started = new Boolean(false);
@@ -17,7 +16,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === '!patrol') {
-        const attachment = new Discord.Attachment('https://i.imgur.com/w3duR07.png');
+        const attachment = new Attachment('https://i.imgur.com/w3duR07.png');
         message.channel.send(attachment);
         message.channel.send("Listen up, rangers. We need a team to get us intel on a recently discovered NVA compound. Who's in?");
         message.channel.send("Enter :regional_indicator_j: to join");
